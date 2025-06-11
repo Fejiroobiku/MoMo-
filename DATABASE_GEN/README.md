@@ -73,6 +73,5 @@ Ensure you have the following installed on your system:
 ## License
 No licencse
 
-## Author
-Aimable Nkurikiyimana
+
 
