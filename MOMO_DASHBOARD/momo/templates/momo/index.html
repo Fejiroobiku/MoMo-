@@ -1,0 +1,390 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Momo Dashboard
+    </title>
+    <link rel="icon" type="image/png" href="./images/M_Logo.jpg" />
+    <link rel="stylesheet" href="{% static 'momo/css/swag.css' %}" />
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- header design -->
+    <header class="header">
+      <a href="#" class="logo"
+        >M-dashboard <span class="animate" style="--i: 1"></span
+      ></a>
+      <div class="bx bx-menu" id="menu-icon">
+        <span class="animate" style="--i: 2"></span>
+      </div>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#history">History</a>
+        <a href="#percentage_charts">Overview</a>
+
+        <span class="active-nav"></span>
+        <span class="animate" style="--i: 2"></span>
+      </nav>
+    </header>
+    <!-- home section design -->
+    <section class="home show-animate" id="home">
+      <div class="home-content">
+        <h1>
+          MTN <span> MoMo</span
+          ><span class="animate" style="--i: 2"></span>
+        </h1>
+        <div class="text-animate">
+          <h3>Dashboard</h3>
+          <span class="animate" style="--i: 3"></span>
+        </div>
+        <p>
+            Hi there! I’m MTN MoMo Dashboard, your trusted mobile money "extension" app that tracks your transactions
+            that lets you  view, categorize, analyse and display your transactions in an attractive way directly from your phone's message.
+            Whether it’s funds transferred, bills paid, airtime topups, or cashpower bills paid, I’ve got you categorized – anytime, anywhere.
+            I’m here to make tracking simple and accessible,.
+             It’s all about giving you the convenience to track your MoMo Money spendings with ease.
+ <br />
+          <span class="animate" style="--i: 4"></span>
+        </p>
+
+
+
+        <div class="home-sci">
+
+        <a href="#history"><i class='bx bxs-credit-card-front'></i>
+
+        <span class="animate" style="--i: 6"></span>
+      </div>
+
+      <div class="home-imgHover"></div>
+      <span class="animate home-img" style="--i: 7"></span>
+    </section>
+
+    <!-- dashboard section design -->
+    <section class="dashboard" id="dashboard">
+      <h2 class="heading">
+         <span>Dashboard</span><span class="animate scroll" style="--i: 1"></span>
+      </h2>
+      <!-- dashboard -->
+      <section class="charts" id="charts">
+        <h2 class="heading">
+          Transaction <span>Analysis</span>
+          <span class="animate scroll" style="--i: 1"></span>
+        </h2>
+
+        <div class="charts-row">
+          <!-- Transaction Volume Chart -->
+          <div class="charts-column">
+            <h3 class="title">
+              Transaction Volume<span class="animate scroll" style="--i: 2"></span>
+            </h3>
+            <div class="charts-box">
+              <div class="charts-content">
+                <canvas id="transactionVolumeChart"></canvas>
+              </div>
+              <span class="animate scroll" style="--i: 3"></span>
+            </div>
+          </div>
+
+          <!-- Monthly Trends Chart -->
+          <div class="charts-column">
+            <h3 class="title">
+              Monthly Trends<span class="animate scroll" style="--i: 5"></span>
+            </h3>
+            <div class="charts-box">
+              <div class="charts-content">
+                <canvas id="monthlyTrendsChart"></canvas>
+              </div>
+              <span class="animate scroll" style="--i: 6"></span>
+            </div>
+          </div>
+
+          <!-- Service Provider Distribution -->
+          <div class="charts-column">
+            <h3 class="title">
+              Service Providers<span class="animate scroll" style="--i: 7"></span>
+            </h3>
+            <div class="charts-box">
+              <div class="charts-content">
+                <canvas id="providerDistributionChart"></canvas>
+              </div>
+              <span class="animate scroll" style="--i: 8"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="dashboard-img">
+        <img src="./images/dashboard Davy.jpg" alt="" />
+        <span class="circle-spin"></span>
+        <span class="animate scroll" style="--i: 2"></span>
+      </div>
+
+      <div class="dashboard-content">
+        <h3>
+          <span
+            class="animate scroll"
+            style="--i: 4"
+          ></span>
+        </h3>
+      </div>
+    </section>
+
+    <!-- history section design -->
+    <section class="history" id="history">
+      <h2 class="heading">
+      Transaction <span>History</span
+        ><span class="animate scroll" style="--i: 1"></span>
+      </h2>
+
+      <div class="history-row">
+        <div class="history-column">
+          <h3 class="title">
+            <span class="animate scroll" style="--i: 2"></span>
+          </h3>
+
+          <div class="history-box">
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:moneyrecieved' %}">
+                  <div class="year"><i class="bx bx-table"></i>Incoming Money</div>
+                  <h3>Money Recieved</h3>
+                  <p>
+                    Records of money recieved
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:airtime' %}">
+                  <div class="year"><i class="bx bx-table"></i>Payments</div>
+                  <h3>Airtime</h3>
+                  <p>
+                    Records of amounts paid to buy Airtime
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:transferstomomo' %}">
+                  <div class="year"><i class="bx bx-table"></i>Transfers</div>
+                  <h3>MoMo </h3>
+                  <p>
+                    Record of transfers to Mobile numbers
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:paymenttocode' %}">
+                  <div class="year"><i class="bx bx-table"></i>Payments</div>
+                  <h3>Payments To Codes</h3>
+                  <p>
+                    Records of general payment to code holders
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:cashpower' %}">
+                  <div class="year"><i class="bx bx-table"></i>Payments</div>
+                  <h3>Cashpower</h3>
+                  <p>
+                    Records of cashpower bill payments
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:transactions' %}">
+                  <div class="year"><i class="bx bx-table"></i>Transactions</div>
+                  <h3>Transactions</h3>
+                  <p>
+                    Records of transactions initiated by third parties
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:withdrawals' %}">
+                  <div class="year"><i class="bx bx-table"></i>Withdrawals</div>
+                  <h3>Cash Withdraw</h3>
+                  <p>
+                    Records of withdraws
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:data' %}">
+                  <div class="year"><i class="bx bx-table"></i>Payments</div>
+                  <h3>Data Bundles</h3>
+                  <p>
+                    Records of Data Bundles purchased
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="history-content">
+              <div class="content">
+                <a href="{% url 'momo:bankdepo' %}">
+                  <div class="year">
+                    <i class="bx bx-table"></i>Deposits
+                  </div>
+                  <h3>Bank Deposits</h3>
+                  <p>
+                    Records of Transactions initiated by banks transfers money to the user's Momo Account
+                  </p>
+                </a>
+              </div>
+            </div>
+            <span class="animate scroll" style="--i: 3"></span>
+          </div>
+        </div>
+            <span class="animate scroll" style="--i: 6"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- charts section design -->
+    <section class="charts" id="percentage_charts">
+      <h2 class="heading">
+         Transactions you do<span> Most</span
+        ><span class="animate scroll" style="--i: 1"></span>
+      </h2>
+      <div class="charts-row">
+        <div class="charts-column">
+          <h3 class="title">
+            Percentage analysis<span class="animate scroll" style="--i: 2"></span>
+          </h3>
+
+          <div class="charts-box">
+            <div class="charts-content">
+              <div class="progress">
+                <h3>Incoming Money <span>{{ money_received_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Payments to code holders <span>{{ payments_code_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Transfers to mobile numbers <span>{{ momo_transfers_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Bank deposits <span>{{ bank_deposits_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Airtime bill payments <span>{{ airtime_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Cash power bill payments <span>{{ cash_power_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+            <span class="animate scroll" style="--i: 3"></span>
+          </div>
+        </div>
+
+        <div class="charts-column">
+          <h3 class="title">
+            <span>Other</span> Transactions<span
+              class="animate scroll"
+              style="--i: 5"
+            ></span>
+          </h3>
+
+          <div class="charts-box">
+            <div class="charts-content">
+              <div class="progress">
+                <h3>Transactions by third paties <span>{{ third_party_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Withdrawal from agents <span>{{ withdrawals_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Bank Transfers <span>{{ withdrawals_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+              <div class="progress">
+                <h3>Internet and voice bundle purchase <span>{{ bundles_packs_percentage|floatformat:2 }}%</span></h3>
+                <div class="bar"><span></span></div>
+              </div>
+
+            </div>
+            <span class="animate scroll" style="--i: 6"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy; 2025 by Group 1 | All Rights Reserved.
+        </p>
+        <span class="animate scroll" style="--i: 1"></span>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+        <span class="animate scroll" style="--i: 3"></span>
+      </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxFRX9Oz3oD9OXD6HhUK7Phl4XEfFUsWPm88LieOn0yiSyb5VVnXHnSnElODNIfXDo0/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 4000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
+wnvcx

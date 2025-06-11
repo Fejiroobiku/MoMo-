@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Transactions
+    </title>
+
+    <link rel="icon" type="image/png" href="./images/M_Logo.jpg" />
+    <link rel="stylesheet" href="{% static 'momo/css/tables.css' %}" />
+
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="wrapper">
+        {% block tablename %}
+        {% endblock %}
+
+        <ul>
+          <li><a href="{% url 'momo:home' %}" style="all: unset, ">Go Home</a></li>
+          <li><a href="http://127.0.0.1:8000/momo/#history" style="all: unset">Go Back</a></li>
+        </ul>
+        <div class="table-container">
+          <div class="search-section">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+          </div>
+            <table id="dataTable">
+                {% block body %}
+                {% endblock %}
+            </table>
+        </div>
+      </div>
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const table = document.getElementById('dataTable');
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                const row = rows[i];
+                const cells = row.getElementsByTagName('td');
+                let found = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    const cell = cells[j];
+                    if (cell.textContent.toLowerCase().indexOf(searchTerm) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.style.display = found ? '' : 'none';
+            }
+        });
+
+        function sortTable(n) {
+            const table = document.getElementById('dataTable');
+            let switching = true;
+            let dir = 'asc';
+            let switchcount = 0;
+
+            while (switching) {
+                switching = false;
+                const rows = table.getElementsByTagName('tr');
+
+                for (let i = 1; i < rows.length - 1; i++) {
+                    let shouldSwitch = false;
+                    const x = rows[i].getElementsByTagName('td')[n];
+                    const y = rows[i + 1].getElementsByTagName('td')[n];
+
+                    if (dir === 'asc') {
+                        if (x.textContent.toLowerCase() > y.textContent.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else {
+                        if (x.textContent.toLowerCase() < y.textContent.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+
+                    if (shouldSwitch) {
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        switchcount++;
+                    }
+                }
+
+                if (switchcount === 0 && dir === 'asc') {
+                    dir = 'desc';
+                    switching = true;
+                }
+            }
+        }
+    </script>
+  </body>
