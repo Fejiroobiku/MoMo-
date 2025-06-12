@@ -5,7 +5,7 @@ from models import Base
 
 
 class BankDeposits(Base):
-    """model for a table that stores deposits from bank accounts"""
+    """This is a model for a table that stores deposits from bank accounts"""
 
     __tablename__ = "bank_deposits"
 

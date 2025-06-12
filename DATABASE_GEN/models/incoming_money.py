@@ -5,7 +5,7 @@ from models import Base
 
 
 class IncomingMoney(Base):
-    """model for a table that stores amount recieved"""
+    """This model for a table that stores amount recieved"""
 
     __tablename__ = "money_recieved"
 

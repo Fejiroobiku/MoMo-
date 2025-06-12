@@ -4,7 +4,7 @@ from models import Base
 
 
 class CashPowerPayments(Base, PaymentBase):
-    """model for a table that stores payment to cashpower bills"""
+    """This model for a table that stores payment to cashpower bills"""
 
     __tablename__ = "cash_power_payments"
 
