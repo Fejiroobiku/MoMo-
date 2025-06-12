@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                       datasets: [{
                           label: 'Transaction Volume',
                           data: Object.values(data.transaction_volumes),
-                          backgroundColor: 'rgba(255, 204, 8, 0.5)',
+                          backgroundColor: 'rgba(53, 255, 8, 0.5)',
                           borderColor: '#FFCC08',
                           borderWidth: 1
                       }]
