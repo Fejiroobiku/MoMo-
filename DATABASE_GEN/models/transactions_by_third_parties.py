@@ -5,7 +5,7 @@ from models import Base
 
 
 class PaymentToThirdParty(Base, PaymentBase):
-    """model for a table that stores payment to thirdparties"""
+    """This model is for a table that stores payment to thirdparties"""
 
     __tablename__ = "payments_to_third_parties"
 

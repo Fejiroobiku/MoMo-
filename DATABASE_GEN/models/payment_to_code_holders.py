@@ -5,7 +5,7 @@ from models import Base
 
 
 class PaymentToCode(Base):
-    """model for a table that stores payment to codes"""
+    """This model is for a table that stores payment to codes"""
 
     __tablename__ = "payment_to_code"
 

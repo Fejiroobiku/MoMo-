@@ -5,7 +5,7 @@ from models import Base
 
 
 class Withdrawals(Base):
-    """model for a table that stores withdraw transactions"""
+    """This model is for a table that stores withdraw transactions"""
 
     __tablename__ = "withdrawals"
     id = Column(Integer, primary_key=True, nullable=False)
