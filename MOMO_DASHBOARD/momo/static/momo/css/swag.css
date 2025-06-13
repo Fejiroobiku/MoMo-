@@ -12,12 +12,12 @@
 }
 
 :root {
-  --bg-color: #000000dc; /*The main Page color*/
-  --second-bg-color: #000000dc; /*Second Backgroung*/
-  --text-color: #ffffff; /*Text color*/
-  --main-color: 	#FFCC08; /*Main color*/
-  --grey-bg-color: #ffffff; /* Light blue background */
-  --grey-text-color: #c0c7ce; /* Grey text */
+  --bg-color: #0d1b2a; /* Keep dark navy */
+  --second-bg-color: #1b263b; /* Keep secondary */
+  --text-color: #f1f5f9; /* Soft white */
+  --main-color: #f5f7b4cd; /* Professional blue */
+  --grey-bg-color: #ffffff;
+  --grey-text-color: #64748b;
 }
 
 html {
@@ -189,6 +189,9 @@ section {
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
+  border-radius: 2rem; /* More rounded = different feel */
+  font-weight: 500; /* Slightly lighter font weight */
+  letter-spacing: 0.05rem;
 }
 .btn-box .btn:hover {
   color: var(--main-color);
@@ -294,6 +297,8 @@ section {
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
+  font-weight: 600; 
+  letter-spacing: -0.02em; 
 }
 
 span {
