@@ -21,16 +21,16 @@
     <!-- header design -->
     <header class="header">
       <a href="#" class="logo"
-        >M-dashboard <span class="animate" style="--i: 1"></span
+        >THE MOMO DASHBOARD <span class="animate" style="--i: 1"></span
       ></a>
       <div class="bx bx-menu" id="menu-icon">
         <span class="animate" style="--i: 2"></span>
       </div>
       <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#dashboard">Dashboard</a>
-        <a href="#history">History</a>
-        <a href="#percentage_charts">Overview</a>
+        <a href="#home" class="active">HOME</a>
+        <a href="#history">HISTORY</a>
+        <a href="#dashboard">DASHBOARD</a>
+        <a href="#percentage_charts">OVERVIEW</a>
 
         <span class="active-nav"></span>
         <span class="animate" style="--i: 2"></span>
@@ -44,13 +44,13 @@
           ><span class="animate" style="--i: 2"></span>
         </h1>
         <div class="text-animate">
-          <h3>Dashboard</h3>
+          <h3>DASHBOARD</h3>
           <span class="animate" style="--i: 3"></span>
         </div>
         <p>
-            Hello! I’m the MTN MoMo Dashboard — your go-to mobile money companion.
-I help you track, categorize, analyze, and display your transactions directly from your phone’s messages. Whether you’re sending money, buying airtime, paying bills, or topping up electricity, I keep it all organized for you — anytime, anywhere.
-With MoMo Dashboard, managing your mobile money is simple, smart, and convenient. It’s all about making your spending easier to understand and control.
+           Hey there! I’m your MTN MoMo Dashboard. The smart buddy that keeps tabs on your mobile money life.
+From sending cash to friends, buying airtime, paying bills, or topping up electricity, I’ve got you covered. I scoop the info right from your SMS messages and turn it into clear, colorful insights, all in one place.
+Think of me as your personal finance sidekick, always ready to help you track, sort, and understand where your money is going. With me, mobile money management is quick, simple, and kinda fun too.
  <br />
           <span class="animate" style="--i: 4"></span>
         </p>
@@ -199,9 +199,9 @@ With MoMo Dashboard, managing your mobile money is simple, smart, and convenient
               <div class="content">
                 <a href="{% url 'momo:cashpower' %}">
                   <div class="year"><i class="bx bx-table"></i>Payments</div>
-                  <h3>Cashpower</h3>
+                  <h3>CashPower</h3>
                   <p>
-                    Records of cashpower bill payments
+                    Records of cashPower bill payments
                   </p>
                 </a>
               </div>
@@ -265,13 +265,13 @@ With MoMo Dashboard, managing your mobile money is simple, smart, and convenient
     <!-- charts section design -->
     <section class="charts" id="percentage_charts">
       <h2 class="heading">
-         Transactions you do<span> Most</span
+         Transactions you do<span> Often</span
         ><span class="animate scroll" style="--i: 1"></span>
       </h2>
       <div class="charts-row">
         <div class="charts-column">
           <h3 class="title">
-            Percentage analysis<span class="animate scroll" style="--i: 2"></span>
+            <span>Percentage analysis</span>span> class="animate scroll" style="--i: 2"></span>
           </h3>
 
           <div class="charts-box">
@@ -302,7 +302,7 @@ With MoMo Dashboard, managing your mobile money is simple, smart, and convenient
               </div>
 
               <div class="progress">
-                <h3>Cash power bill payments <span>{{ cash_power_percentage|floatformat:2 }}%</span></h3>
+                <h3>Cash Power bill payments <span>{{ cash_power_percentage|floatformat:2 }}%</span></h3>
                 <div class="bar"><span></span></div>
               </div>
             </div>
@@ -321,7 +321,7 @@ With MoMo Dashboard, managing your mobile money is simple, smart, and convenient
           <div class="charts-box">
             <div class="charts-content">
               <div class="progress">
-                <h3>Transactions by third paties <span>{{ third_party_percentage|floatformat:2 }}%</span></h3>
+                <h3>Transactions by third parties <span>{{ third_party_percentage|floatformat:2 }}%</span></h3>
                 <div class="bar"><span></span></div>
               </div>
 
