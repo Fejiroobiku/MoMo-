@@ -1,77 +1,108 @@
-# MOMO Transactions Parser
+MoMo Transaction Data Extractor
 
-## Description
-This project extracts financial transaction data from an XML file containing mobile money (MoMo) transaction messages. The extracted data is parsed, categorized, and stored in an SQLite database.
+Overview
+This application is designed to extract, interpret, and organize transaction details from an XML file containing mobile money (MoMo) message records. It processes the data, classifies transactions, and stores them in a structured SQLite database.
 
-## Features
-- Parses an XML file (`modified_sms_v2.xml`) containing MoMo transaction records.
-- Categorizes transactions into various tables, including:
-  - Incoming money
-  - Airtime purchases
-  - Bank deposits
-  - Cash power bill payments
-  - Transfers to MoMo numbers
-  - Internet and voice bundles
-  - Payments to code holders
-  - Withdrawals
-  - Transactions initiated by third parties
-- Uses SQLAlchemy as an ORM for database management.
-- Logs invalid and failed transactions separately in JSON files.
+Key Functionalities
+Processes an XML file (modified_sms_v2.xml) with MoMo-related SMS transaction entries.
 
-## Installation
-### Prerequisites
-Ensure you have the following installed on your system:
-- Python 3
-- SQLite3
-- Required Python packages: `sqlalchemy`, `xml.etree.ElementTree`
+Differentiates and stores various transaction types in separate database tables, such as:
 
-### Setup
-1. Clone the repository:
-   ```sh
-   git clone <repository_url>
-   cd momo_transactions_parser
-   ```
-2. Ensure `modified_sms_v2.xml` is present in the project directory.
+Funds received
 
-## Usage
-1. Run the script:
-   ```sh
-   python main.py
-   ```
-2. The script will parse the XML data and populate the `momo_database.db` file with categorized transactions. (Which will be used by Django)
-3. Check the generated JSON logs (`failed_transactions_data.json` and `invalid_data.json`) for any failed or unrecognized transactions.
+Airtime recharges
 
-## Project Structure
-```
+Bank transfers
+
+Cash Power bill settlements
+
+MoMo-to-MoMo transfers
+
+Bundle purchases (internet and voice)
+
+Payments made to coded merchant accounts
+
+Money withdrawals
+
+Transactions triggered by external users
+
+Employs SQLAlchemy ORM for seamless interaction with the database.
+
+Logs any failed or invalid transaction data into JSON files for easy debugging.
+
+Setup Instructions
+Requirements
+To run this project, ensure your environment has the following:
+
+Python 3 installed
+
+SQLite3 database engine
+
+Python libraries: sqlalchemy, and the built-in xml.etree.ElementTree
+
+Installation Steps
+Clone the project repository:
+
+bash
+Copy
+Edit
+git clone <repository_url>  
+cd momo_transactions_parser  
+Place the modified_sms_v2.xml file in the root of the project directory.
+
+How to Use
+Execute the main script:
+
+bash
+Copy
+Edit
+python main.py  
+The parser will extract and save transactions to an SQLite file named momo_database.db, which will later be used within a Django environment.
+
+Refer to failed_transactions_data.json and invalid_data.json to review any transactions the script couldn't process correctly.
+
+File & Folder Structure
+graphql
+Copy
+Edit
 .
-├── models/                     # Contains SQLAlchemy models for different transaction types
-│   ├── __init__.py
-│   ├── airtime_payments.py
-│   ├── bank_deposits.py
-│   ├── cash_power_bills.py
-│   ├── incoming_money.py
-│   ├── internet_and_voice_bundle.py
-│   ├── payment_to_code_holders.py
-│   ├── transactions_by_third_parties.py
-│   ├── transfers_to_momo.py
-│   ├── withdrawals.py
-|   |__ payments_base.py
+├── models/                          # All SQLAlchemy models categorized by transaction type
+│   ├── __init__.py  
+│   ├── airtime_payments.py  
+│   ├── bank_deposits.py  
+│   ├── cash_power_bills.py  
+│   ├── incoming_money.py  
+│   ├── internet_and_voice_bundle.py  
+│   ├── payment_to_code_holders.py  
+│   ├── transactions_by_third_parties.py  
+│   ├── transfers_to_momo.py  
+│   ├── withdrawals.py  
+│   └── payments_base.py  
 │
-├── main.py                      # Main script to process XML and populate the database
-├── db_functions.py               # Helper functions for data conversion
-├── modified_sms_v2.xml           # XML file containing transaction messages
-├── momo_database.db              # SQLite database (generated)
-├── failed_transactions_data.json # Logs of failed transactions
-├── invalid_data.json             # Logs of invalid transactions
-└── README.md                     # Project documentation
-```
+├── main.py                          # Core script that drives the parsing process  
+├── db_functions.py                  # Utility methods for data formatting and processing  
+├── modified_sms_v2.xml              # Source XML file with raw MoMo messages  
+├── momo_database.db                 # Generated SQLite DB file holding the parsed data  
+├── failed_transactions_data.json    # Output log of failed transactions  
+├── invalid_data.json                # Output log for unrecognized message formats  
+└── README.md                        # Documentation  
+Additional Information
+The script includes logic to prevent redundant entries by catching IntegrityError exceptions from SQLAlchemy.
 
-## Notes
-- Duplicate data handling: The script prevents inserting duplicate records using SQLAlchemy’s `IntegrityError` handling.
-- The `convert_to_date` function helps convert dates into a standardized format.
+Date formatting is standardized using the convert_to_date utility function.
 
-## License
-No licencse
+License
+This project does not currently use any specific license.
+
+
+
+
+
+
+
+
+
+
 
 
 
