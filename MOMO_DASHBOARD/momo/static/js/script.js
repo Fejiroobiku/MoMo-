@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           y: {
                               beginAtZero: true,
                               grid: {
-                                  color: 'rgba(255, 255, 255, 0.1)'
+                                  color: 'rgba(7, 38, 174, 0.1)'
                               }
                           },
                           x: {

@@ -1,0 +1,12 @@
+AUTHORS
+
+Project: MoMo Transaction Data Extractor
+Description: A tool that processes mobile money (MoMo) XML data into categorized transactions within an SQLite database, used in combination with a Django-based frontend.
+
+1. Hikma Hamza  
+
+2. Oghenefejiro Obiku Michael  
+
+3. Julie Izaro  
+   
+Date: June 2025
