@@ -1,12 +1,23 @@
-AUTHORS
-
 Project: MoMo Transaction Data Extractor
 Description: A tool that processes mobile money (MoMo) XML data into categorized transactions within an SQLite database, used in combination with a Django-based frontend.
 
+AUTHORS
 1. Hikma Hamza  
+   - Role: Frontend Developer & Backend Support  
+   - Contributions:
+     • Built the majority of the HTML structure and handled interface layout.  
+     • Contributed partially to backend logic and integration with Django.
 
 2. Oghenefejiro Obiku Michael  
+   - Role: Backend Developer  
+   - Contributions:
+     • Developed the core backend functionality.  
+     • Implemented XML data parsing, SQLAlchemy models, and database population logic.
 
 3. Julie Izaro  
-   
-Date: June 2025
+   - Role: UI/UX & CSS Designer  
+   - Contributions:
+     • Designed and styled the application using CSS.  
+     • Ensured visual consistency and responsiveness across frontend components.
+Date: June 2025  
+  
