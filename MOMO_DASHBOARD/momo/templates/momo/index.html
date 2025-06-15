@@ -264,42 +264,40 @@ Think of me as your personal finance sidekick, always ready to help you track, s
           <h3 class="title">
             <span>Percentage analysis</span>span> class="animate scroll" style="--i: 2"></span>
           </h3>
+<div class="charts-box">
+  <div class="charts-content">
+    <div class="progress">
+      <h3>Cash Power bill payments <span>{{ cash_power_percentage|floatformat:2 }}%</span></h3>
+      <div class="bar"><span></span></div>
+    </div>
 
-          <div class="charts-box">
-            <div class="charts-content">
-              <div class="progress">
-                <h3>Incoming Money <span>{{ money_received_percentage|floatformat:2 }}%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
+    <div class="progress">
+      <h3>Transfers to mobile numbers <span>{{ momo_transfers_percentage|floatformat:2 }}%</span></h3>
+      <div class="bar"><span></span></div>
+    </div>
 
-              <div class="progress">
-                <h3>Payments to code holders <span>{{ payments_code_percentage|floatformat:2 }}%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
+    <div class="progress">
+      <h3>Incoming Money <span>{{ money_received_percentage|floatformat:2 }}%</span></h3>
+      <div class="bar"><span></span></div>
+    </div>
 
-              <div class="progress">
-                <h3>Transfers to mobile numbers <span>{{ momo_transfers_percentage|floatformat:2 }}%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
+    <div class="progress">
+      <h3>Airtime bill payments <span>{{ airtime_percentage|floatformat:2 }}%</span></h3>
+      <div class="bar"><span></span></div>
+    </div>
 
-              <div class="progress">
-                <h3>Bank deposits <span>{{ bank_deposits_percentage|floatformat:2 }}%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
+    <div class="progress">
+      <h3>Payments to code holders <span>{{ payments_code_percentage|floatformat:2 }}%</span></h3>
+      <div class="bar"><span></span></div>
+    </div>
 
-              <div class="progress">
-                <h3>Airtime bill payments <span>{{ airtime_percentage|floatformat:2 }}%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-
-              <div class="progress">
-                <h3>Cash Power bill payments <span>{{ cash_power_percentage|floatformat:2 }}%</span></h3>
-                <div class="bar"><span></span></div>
-              </div>
-            </div>
-            <span class="animate scroll" style="--i: 3"></span>
-          </div>
-        </div>
+    <div class="progress">
+      <h3>Bank deposits <span>{{ bank_deposits_percentage|floatformat:2 }}%</span></h3>
+      <div class="bar"><span></span></div>
+    </div>
+  </div>
+  <span class="animate scroll" style="--i: 3"></span>
+</div>
 
         <div class="charts-column">
           <h3 class="title">
