@@ -136,131 +136,120 @@ Think of me as your personal finance sidekick, always ready to help you track, s
         </h3>
       </div>
     </section>
+<!-- history section design -->
+<section class="history" id="history">
+  <h2 class="heading">
+    <span>Transaction History</span>
+    <span class="animate scroll" style="--i: 1"></span>
+  </h2>
 
-    <!-- history section design -->
-    <section class="history" id="history">
-      <h2 class="heading">
-      Transaction <span>History</span
-        ><span class="animate scroll" style="--i: 1"></span>
-      </h2>
+  <div class="history-row">
+    <div class="history-column">
+      <h3 class="title">
+        <span class="animate scroll" style="--i: 2"></span>
+      </h3>
 
-      <div class="history-row">
-        <div class="history-column">
-          <h3 class="title">
-            <span class="animate scroll" style="--i: 2"></span>
-          </h3>
+      <div class="history-box">
 
-          <div class="history-box">
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:moneyrecieved' %}">
-                  <div class="year"><i class="bx bx-table"></i>Incoming Money</div>
-                  <h3>Money Recieved</h3>
-                  <p>
-                    Records of money recieved
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:airtime' %}">
-                  <div class="year"><i class="bx bx-table"></i>Payments</div>
-                  <h3>Airtime</h3>
-                  <p>
-                    Records of amounts paid to buy Airtime
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:transferstomomo' %}">
-                  <div class="year"><i class="bx bx-table"></i>Transfers</div>
-                  <h3>MoMo </h3>
-                  <p>
-                    Record of transfers to Mobile numbers
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:paymenttocode' %}">
-                  <div class="year"><i class="bx bx-table"></i>Payments</div>
-                  <h3>Payments To Codes</h3>
-                  <p>
-                    Records of general payment to code holders
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:cashpower' %}">
-                  <div class="year"><i class="bx bx-table"></i>Payments</div>
-                  <h3>CashPower</h3>
-                  <p>
-                    Records of cashPower bill payments
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:transactions' %}">
-                  <div class="year"><i class="bx bx-table"></i>Transactions</div>
-                  <h3>Transactions</h3>
-                  <p>
-                    Records of transactions initiated by third parties
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:withdrawals' %}">
-                  <div class="year"><i class="bx bx-table"></i>Withdrawals</div>
-                  <h3>Cash Withdraw</h3>
-                  <p>
-                    Records of withdraws
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:data' %}">
-                  <div class="year"><i class="bx bx-table"></i>Payments</div>
-                  <h3>Data Bundles</h3>
-                  <p>
-                    Records of Data Bundles purchased
-                  </p>
-                </a>
-              </div>
-            </div>
-
-            <div class="history-content">
-              <div class="content">
-                <a href="{% url 'momo:bankdepo' %}">
-                  <div class="year">
-                    <i class="bx bx-table"></i>Deposits
-                  </div>
-                  <h3>Bank Deposits</h3>
-                  <p>
-                    Records of Transactions initiated by banks transfers money to the user's Momo Account
-                  </p>
-                </a>
-              </div>
-            </div>
-            <span class="animate scroll" style="--i: 3"></span>
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:cashpower' %}">
+              <div class="year"><i class="bx bx-table"></i>Payments</div>
+              <h3>CashPower</h3>
+              <p>Records of cashPower bill payments</p>
+            </a>
           </div>
         </div>
-            <span class="animate scroll" style="--i: 6"></span>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:transactions' %}">
+              <div class="year"><i class="bx bx-table"></i>Transactions</div>
+              <h3>Transactions</h3>
+              <p>Records of transactions initiated by third parties</p>
+            </a>
           </div>
         </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:data' %}">
+              <div class="year"><i class="bx bx-table"></i>Payments</div>
+              <h3>Data Bundles</h3>
+              <p>Records of Data Bundles purchased</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:moneyrecieved' %}">
+              <div class="year"><i class="bx bx-table"></i>Incoming Money</div>
+              <h3>Money Recieved</h3>
+              <p>Records of money recieved</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:paymenttocode' %}">
+              <div class="year"><i class="bx bx-table"></i>Payments</div>
+              <h3>Payments To Codes</h3>
+              <p>Records of general payment to code holders</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:airtime' %}">
+              <div class="year"><i class="bx bx-table"></i>Payments</div>
+              <h3>Airtime</h3>
+              <p>Records of amounts paid to buy Airtime</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:withdrawals' %}">
+              <div class="year"><i class="bx bx-table"></i>Withdrawals</div>
+              <h3>Cash Withdraw</h3>
+              <p>Records of withdraws</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:transferstomomo' %}">
+              <div class="year"><i class="bx bx-table"></i>Transfers</div>
+              <h3>MoMo</h3>
+              <p>Record of transfers to Mobile numbers</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="history-content">
+          <div class="content">
+            <a href="{% url 'momo:bankdepo' %}">
+              <div class="year"><i class="bx bx-table"></i>Deposits</div>
+              <h3>Bank Deposits</h3>
+              <p>
+                Records of Transactions initiated by banks transfers money to the user's Momo Account
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <span class="animate scroll" style="--i: 3"></span>
       </div>
-    </section>
+    </div>
+    <span class="animate scroll" style="--i: 6"></span>
+  </div>
+</section>
+
 
     <!-- charts section design -->
     <section class="charts" id="percentage_charts">
