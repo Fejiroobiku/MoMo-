@@ -64,6 +64,9 @@ python manage.py runserver
 6. Go to the link given 
    Now you can use and navigate our beautiful\_\_ app.
 
+   ##  Video Link 
+  https://youtu.be/wX0SsLhjlwk
+
 
 
 ## Project Structure
@@ -126,6 +129,6 @@ python manage.py runserver
 - [Chart.js Documentation](https://www.chartjs.org/)
 
 ## License
-
 No License
+
 
