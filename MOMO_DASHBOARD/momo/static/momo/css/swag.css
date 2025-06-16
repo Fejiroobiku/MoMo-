@@ -12,12 +12,12 @@
 }
 
 :root {
-  --bg-color:  #0d1b2a; 
-  --second-bg-color: #1b263b; 
-  --text-color: #f1f5f9; 
-  --main-color: #f5f7b4cd; 
+  --bg-color: #0a1010; /* Keep dark navy */
+  --second-bg-color: #4d4c49; /* Keep secondary */
+  --text-color: rgb(255, 255, 255); /* Soft white */
+  --main-color: #ce8686;/* Professional blue */
   --grey-bg-color: #ffffff;
-  --grey-text-color: #64748b;
+  --grey-text-color: #888593;
 }
 
 html {
@@ -96,7 +96,7 @@ section {
   isolation: isolate;
   filter: hue-rotate(
     10deg
-  ); 
+  ); /* Adjust the degree value as needed for your desired hue effect */
 }
 .home::after {
   content: "";
@@ -189,8 +189,8 @@ section {
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
-  border-radius: 2rem; 
-  font-weight: 500; 
+  border-radius: 2rem; /* More rounded = different feel */
+  font-weight: 500; /* Slightly lighter font weight */
   letter-spacing: 0.05rem;
 }
 .btn-box .btn:hover {
@@ -261,7 +261,7 @@ section {
   height: 100%;
   background: var(--main-color);
   z-index: -1;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .home-sci a:hover::before {
@@ -336,7 +336,7 @@ span {
 }
 
 .dashboard.show-animate .dashboard-img .circle-spin {
-  animation: dashboardSpinner 8s linear infinite;
+  animation: dashboardSpinner 7s linear infinite;
 }
 
 .dashboard-content {
@@ -546,11 +546,11 @@ span {
 }
 
 .charts-column:nth-child(1) .charts-content .progress:nth-child(2) .bar span {
-  width: 39%;
+  width: 39.88%;
 }
 
 .charts-column:nth-child(1) .charts-content .progress:nth-child(3) .bar span {
-  width: 35%;
+  width: 35.94%;
 }
 
 .charts-column:nth-child(1) .charts-content .progress:nth-child(4) .bar span {
@@ -730,7 +730,7 @@ span {
   background: var(--bg-color);
   z-index: 2;
   opacity: 0.2;
-  transition: opacity 2s ease;
+  transition: opacity 3s ease;
 }
 
 .animate.loaded {
