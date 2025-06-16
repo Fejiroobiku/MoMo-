@@ -12,10 +12,10 @@
 }
 
 :root {
-  --bg-color:  #0d1b2a; /* Keep dark navy */
-  --second-bg-color: #1b263b; /* Keep secondary */
-  --text-color: #f1f5f9; /* Soft white */
-  --main-color: #f5f7b4cd; /* Professional blue */
+  --bg-color:  #0d1b2a; 
+  --second-bg-color: #1b263b; 
+  --text-color: #f1f5f9; 
+  --main-color: #f5f7b4cd; 
   --grey-bg-color: #ffffff;
   --grey-text-color: #64748b;
 }
@@ -96,7 +96,7 @@ section {
   isolation: isolate;
   filter: hue-rotate(
     10deg
-  ); /* Adjust the degree value as needed for your desired hue effect */
+  ); 
 }
 .home::after {
   content: "";
@@ -189,8 +189,8 @@ section {
   z-index: 1;
   overflow: hidden;
   transition: 0.5s;
-  border-radius: 2rem; /* More rounded = different feel */
-  font-weight: 500; /* Slightly lighter font weight */
+  border-radius: 2rem; 
+  font-weight: 500; 
   letter-spacing: 0.05rem;
 }
 .btn-box .btn:hover {
