@@ -12,10 +12,10 @@
 }
 
 :root {
-  --bg-color: #0a1010; /* Keep dark navy */
-  --second-bg-color: #4d4c49; /* Keep secondary */
-  --text-color: rgb(255, 255, 255); /* Soft white */
-  --main-color: #ce8686;/* Professional blue */
+  --bg-color: #0a1010; 
+  --second-bg-color: #4d4c49; 
+  --text-color: rgb(255, 255, 255); 
+  --main-color: #ce8686;
   --grey-bg-color: #ffffff;
   --grey-text-color: #888593;
 }
