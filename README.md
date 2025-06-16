@@ -59,7 +59,7 @@ pip install django
 python manage.py runserver
 ```
 
-/!\: Make sure your are current working directory has manage.py
+/!\: Make sure your current working directory has manage.py
 
 6. Go to the link given 
    Now you can use and navigate our beautiful\_\_ app.
